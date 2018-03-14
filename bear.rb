@@ -17,9 +17,10 @@ attr_accessor :name, :stomach
   end
 
   def hunt_for_fish(river)
+    if river.fish_in_river.empty? != true
     fish_to_remove = river.fish_in_river.shift.species
     @stomach << fish_to_remove
-    # river.fish.shift
+    end
   end
 
 
